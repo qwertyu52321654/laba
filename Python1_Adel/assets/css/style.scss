@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+$primary-color: #333;
+$secondary-color: #666;
+$accent-color: #ff6600;
+$background-color: #f9f9f9;
+$font-family: 'Popins', sans-serif;
+
+
+body {
+    font-family: $font-family;
+    background-color: $background-color;
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* хедер */
+.header {
+    background-color: $primary-color;
+    
+    color: #fff;
+    padding: 20px 0;
+
+    &__logo {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__nav {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 20px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                margin-right: 20px;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: bold;
+
+                    &:hover {
+                        color: $accent-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    background-image: url(../img/Bitmap.png);
+    background: no-repeat;
+    background-color: $secondary-color;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+
+    &__title {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    &__cta {
+        background-color: $accent-color;
+        color: #fff;
+        padding: 15px 30px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: darken($accent-color, 10%);
+        }
+    }
+}
+
+
+.services {
+    padding: 80px 0;
+    text-align: center;
+
+    &__title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .service {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: $secondary-color;
+        }
+    }
+}
+
+
+.footer {
+    background-color: $primary-color;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
